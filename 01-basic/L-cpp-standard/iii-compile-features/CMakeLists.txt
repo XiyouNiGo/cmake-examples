@@ -10,6 +10,8 @@ project (hello_cpp11)
 add_executable(hello_cpp11 main.cpp)
 
 # set the C++ standard to the appropriate standard for using auto
+# 向目标添加预期的编译器功能
+# target系列函数能指定目标生效的范围
 target_compile_features(hello_cpp11 PUBLIC cxx_auto_type)
 
 # Print the list of known compile features for this version of CMake

@@ -1,3 +1,4 @@
+// 只需使用相对路径即可
 #include "sublib1/sublib1.h"
 #include "sublib2/sublib2.h"
 

@@ -13,7 +13,7 @@ add_library(hello_library STATIC
 )
 
 # PRIVATE“目录被添加到这个目标的包含目录
-# INTERFACE：该目录被添加到链接该库的任何目标的包含目录中。
+# INTERFACE：该目录被添加到链接该库的任何目标的包含目录中，用于创建header only library。
 # PUBLIC：包含在此库以及链接此库的任何目标中。
 # include_directory会在所有编译单元加上-I，方便但笨重，性能较低
 # target_include_directories能有效防止冲突
