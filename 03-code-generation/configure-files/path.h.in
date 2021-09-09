@@ -3,6 +3,7 @@
 
 // version variable that will be substituted by cmake
 // This shows an example using the @ variable type
+// ${}或@@标识的变量会被自动替代
 const char* path = "@CMAKE_SOURCE_DIR@";
 
 #endif
