@@ -35,7 +35,14 @@ target_link_libraries( cmake_examples_inst_bin
 # Install
 ############################################################
 
+# 没有设置CMAKE_INSTALL_PREFIX，安装在
+if( CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT )
+  message(STATUS "Setting default CMAKE_INSTALL_PREFIX path to ${CMAKE_BINARY_DIR}/install")
+  set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE STRING "The path to use for make install" FORCE)
+endif()
+
 # Binaries
+# 安装位置受CMAKE_INSTALL_PREFIX影响，默认为/usr/local
 install (TARGETS cmake_examples_inst_bin
     DESTINATION bin)
 

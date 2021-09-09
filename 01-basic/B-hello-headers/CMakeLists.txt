@@ -7,10 +7,14 @@ cmake_minimum_required(VERSION 3.5)
 project (hello_headers)
 
 # Create a sources variable with a link to all cpp files to compile
-set(SOURCES
-    src/Hello.cpp
-    src/main.cpp
-)
+# set(SOURCES
+#     src/Hello.cpp
+#     src/main.cpp
+# )
+# 也可以使用file配合通配符查找所要的文件（不推荐）
+# file(GLOB SOURCES "src/*.cpp") # 递归查找：GLOB_RECURSE
+# 推荐的方式
+aux_source_directory(src SOURCES)
 
 # Add an executable with the above sources
 add_executable(hello_headers ${SOURCES})

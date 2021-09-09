@@ -8,3 +8,5 @@ project (hello_cmake)
 
 # Add an executable
 add_executable(hello_cmake main.cpp)
+# 也可以使用PROJECT_NAME
+# add_executable(${PROJECT_NAME} main.cpp)

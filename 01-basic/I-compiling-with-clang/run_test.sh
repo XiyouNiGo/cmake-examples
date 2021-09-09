@@ -12,6 +12,6 @@ fi
 
 echo "Will use clang [$clang_bin] and clang++ [$clang_xx_bin]"
 
-
+# 使用clang编译（而不是gcc）
 mkdir -p build.clang && cd build.clang && \
     cmake .. -DCMAKE_C_COMPILER=$clang_bin -DCMAKE_CXX_COMPILER=$clang_xx_bin && make

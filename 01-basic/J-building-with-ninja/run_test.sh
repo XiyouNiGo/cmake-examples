@@ -7,5 +7,6 @@ if [ -z $ninja_supported ]; then
     exit
 fi
 
+# 使用ninja构建（而不是make）
 mkdir -p build.ninja && cd build.ninja && \
     cmake .. -G Ninja && ninja
